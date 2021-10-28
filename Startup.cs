@@ -40,8 +40,8 @@ namespace Avocado
                 return new MongoClient(settings.ConnectionString);
             });
 
-            //services.AddSingleton<IRepository, MemoryRepository>();
-            services.AddSingleton<IRepository, MongoRepository>();
+            services.AddSingleton<IRepository, MemoryRepository>();
+            //services.AddSingleton<IRepository, MongoRepository>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
